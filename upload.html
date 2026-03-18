@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prescription Reader</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+
+body{
+    background: linear-gradient(to right, pink, #ffe6f0);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
+}
+
+/* HEADER */
+.header{
+    background:black;
+    color:white;
+    padding:15px;
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* CARD */
+.container{
+    background:white;
+    width:80%;
+    max-width:700px;
+    margin:40px auto;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* BUTTON */
+button{
+    background:red;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkred;
+}
+
+/* RESULT BOX */
+.result{
+    margin-top:25px;
+    background:black;
+    color:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:left;
+    white-space:pre-wrap;
+}
+
+input{
+    margin:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+❤️ AI Health Assistant — Prescription Reader
+</div>
+
+<div class="container">
+
+<h2>Upload Prescription Image</h2>
+
+<form method="POST" enctype="multipart/form-data">
+
+    <input type="file" name="image" accept="image/*" required>
+    <br>
+
+    <button type="submit">Upload & Read</button>
+
+</form>
+
+{% if text %}
+    <h3>Extracted Prescription Text:</h3>
+
+    <div class="result">
+        {{ text }}
+    </div>
+{% endif %}
+
+</div>
+
+</body>
+</html>
