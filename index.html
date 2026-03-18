@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Health Assistant</title>
+
+<style>
+
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #ffc0cb, #ffe4ec);
+    text-align:center;
+}
+
+
+.navbar{
+    background:black;
+    padding:15px;
+    position:sticky;
+    top:0;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.navbar a:hover{
+    color:red;
+}
+
+
+.container{
+    padding:80px 20px;
+}
+
+h1{
+    font-size:52px;
+    font-weight:900;
+    color:black;
+    letter-spacing:4px;
+}
+
+
+.heart{
+    font-size:90px;
+    color:red;
+    animation:beat 1s infinite;
+}
+
+@keyframes beat{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.25);}
+    100%{transform:scale(1);}
+}
+
+
+.box{
+    background:black;
+    color:white;
+    width:65%;
+    margin:30px auto;
+    padding:25px;
+    border-radius:15px;
+    font-size:20px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+button{
+    background:red;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkred;
+}
+
+
+.section{
+    padding:60px 20px;
+}
+
+.section h2{
+    font-size:36px;
+    color:black;
+}
+
+.section p{
+    font-size:20px;
+    font-weight:bold;
+}
+
+
+footer{
+    background:black;
+    color:white;
+    padding:20px;
+    margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- HOME -->
+<div id="home" class="container">
+
+    <div class="heart">❤️</div>
+
+    <h1>AI HEALTH ASSISTANT</h1>
+
+    <div class="box">
+        An intelligent system that helps users understand
+        health information and medical prescriptions easily
+        using Artificial Intelligence.
+    </div>
+
+    <button onclick="startAssistant()">Start Assistant</button>
+
+</div>
+
+
+<div id="about" class="section">
+    <h2>About Project</h2>
+    <p>
+        AI Health Assistant reads prescriptions,
+        explains medical terms, and provides simple
+        health guidance using AI technology.
+    </p>
+</div>
+
+
+<div id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: aihealthassistant@gmail.com</p>
+</div>
+
+
+<footer>
+    Made with ❤️ using AI | © 2026 AI Health Assistant
+</footer>
+
+<script>
+function startAssistant(){
+    alert("Welcome! AI Health Assistant will start soon.");
+}
+</script>
+
+</body>
+</html>
